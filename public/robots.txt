@@ -1,0 +1,26 @@
+# robots.txt para Eventia Digital
+# https://eventiadigital.com
+
+# Permitir a todos los bots rastrear todo el sitio
+User-agent: *
+Allow: /
+
+# Bloquear archivos y carpetas innecesarias
+Disallow: /admin/
+Disallow: /private/
+
+# Permitir explícitamente las páginas importantes
+Allow: /modelo/boda
+Allow: /modelo/15-anos
+Allow: /modelo/baby-shower
+Allow: /modelo/cumpleanos
+Allow: /modelo/comunion
+Allow: /modelo/egreso
+Allow: /modelo/bautizo
+Allow: /modelo/empresarial
+
+# Bloquear demos (contenido de muestra, no para indexar)
+Disallow: /demo/
+
+# Sitemap
+Sitemap: https://eventiadigital.com/sitemap.xml
