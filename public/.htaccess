@@ -1,117 +1,34 @@
-# Eventia Digital - Hostinger Optimization
-# .htaccess para React/Vite SPA
+# ============================================
+# Eventia Digital - Optimized .htaccess
+# React/Vite SPA Configuration
+# Hostinger Hosting Environment
+# Última actualización: 2026-02-03
+# ============================================
 
 # ============================================
-# 1. REDIRECT HTTP A HTTPS (Forzar SSL)
+# 1. SEGURIDAD BÁSICA
 # ============================================
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-</IfModule>
 
-# ============================================
-# 2. COMPRESIÓN GZIP (Reducir tamaño archivos)
-# ============================================
-<IfModule mod_deflate.c>
-  # Comprimir HTML, CSS, JavaScript, Text, XML y fuentes
-  AddOutputFilterByType DEFLATE text/html
-  AddOutputFilterByType DEFLATE text/css
-  AddOutputFilterByType DEFLATE text/javascript
-  AddOutputFilterByType DEFLATE application/javascript
-  AddOutputFilterByType DEFLATE application/x-javascript
-  AddOutputFilterByType DEFLATE text/xml
-  AddOutputFilterByType DEFLATE application/xml
-  AddOutputFilterByType DEFLATE application/json
-  AddOutputFilterByType DEFLATE image/svg+xml
-  AddOutputFilterByType DEFLATE application/font-woff
-  AddOutputFilterByType DEFLATE application/font-woff2
-</IfModule>
-
-# ============================================
-# 3. CACHÉ DEL NAVEGADOR (Acelerar carga)
-# ============================================
-<IfModule mod_expires.c>
-  ExpiresActive On
-  
-  # Imágenes - 1 año
-  ExpiresByType image/jpg "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/gif "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType image/x-icon "access plus 1 year"
-  
-  # CSS y JavaScript - 1 mes
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-  ExpiresByType text/javascript "access plus 1 month"
-  
-  # Fuentes - 1 año
-  ExpiresByType font/woff "access plus 1 year"
-  ExpiresByType font/woff2 "access plus 1 year"
-  ExpiresByType application/font-woff "access plus 1 year"
-  ExpiresByType application/font-woff2 "access plus 1 year"
-  
-  # HTML - Sin caché (para actualizaciones rápidas)
-  ExpiresByType text/html "access plus 0 seconds"
-</IfModule>
-
-# ============================================
-# 4. REACT ROUTER (SPA Routing)
-# Redirigir todas las rutas al index.html
-# ============================================
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  
-  # Si el archivo o directorio existe, servirlo directamente
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  
-  # Redirigir todo al index.html (React Router)
-  RewriteRule . /index.html [L]
-</IfModule>
-
-# ============================================
-# 5. SEGURIDAD BÁSICA
-# ============================================
 # Deshabilitar listado de directorios
-Options -Indexes
+Options -Indexes +FollowSymLinks
 
 # Proteger archivos sensibles
 <FilesMatch "(^#.*#|\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|swp)|~)$">
   Require all denied
 </FilesMatch>
 
-# Prevenir acceso a archivos del sistema
+# Prevenir acceso a archivos del sistema (.env, .git, etc.)
 <FilesMatch "^\.(.*)$">
   Require all denied
 </FilesMatch>
 
-# ============================================
-# 6. TIPOS MIME CORRECTOS
-# ============================================
-<IfModule mod_mime.c>
-  AddType image/svg+xml svg svgz
-  AddEncoding gzip svgz
-  AddType application/font-woff woff
-  AddType application/font-woff2 woff2
-</IfModule>
+# Proteger archivos específicos
+<Files ~ "^(package\.json|package-lock\.json|composer\.json|composer\.lock|\.gitignore|\.htaccess)$">
+  Require all denied
+</Files>
 
 # ============================================
-# 7. PREVENIR HOTLINKING (Robo de imágenes)
-# ============================================
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{HTTP_REFERER} !^$
-  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?eventiadigital\.com [NC]
-  RewriteRule \.(jpg|jpeg|png|gif|webp|svg)$ - [F,L]
-</IfModule>
-
-# ============================================
-# 8. HEADERS DE SEGURIDAD
+# 2. HEADERS DE SEGURIDAD
 # ============================================
 <IfModule mod_headers.c>
   # X-Frame-Options (Prevenir clickjacking)
@@ -125,4 +42,219 @@ Options -Indexes
   
   # Referrer Policy
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  
+  # Permissions Policy (antes Feature Policy)
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  
+  # HSTS (HTTP Strict Transport Security) - Solo si estás 100% seguro
+  # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 </IfModule>
+
+# ============================================
+# 3. REDIRECT HTTP A HTTPS (Forzar SSL)
+# ============================================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Forzar HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  
+  # Forzar www (opcional - descomenta si quieres forzar www)
+  # RewriteCond %{HTTP_HOST} !^www\.
+  # RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  
+  # O eliminar www (opcional - descomenta si NO quieres www)
+  # RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+  # RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ============================================
+# 4. COMPRESIÓN GZIP
+# ============================================
+<IfModule mod_deflate.c>
+  # Comprimir HTML, CSS, JavaScript, Text, XML y fuentes
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE application/font-woff
+  AddOutputFilterByType DEFLATE application/font-woff2
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/woff
+  AddOutputFilterByType DEFLATE font/woff2
+  
+  # Excluir tipos de archivo ya comprimidos
+  SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|webp|mp3|mp4|avi|zip|gz|rar|7z)$ no-gzip
+</IfModule>
+
+# ============================================
+# 5. CACHÉ DEL NAVEGADOR
+# ============================================
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+  
+  # Imágenes - 1 año
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+  
+  # CSS y JavaScript - 1 año (Vite usa hash en nombres de archivo)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  
+  # Fuentes - 1 año
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+  
+  # HTML - Sin caché (SPA necesita actualización rápida)
+  ExpiresByType text/html "access plus 0 seconds"
+  
+  # JSON y XML - 1 hora
+  ExpiresByType application/json "access plus 1 hour"
+  ExpiresByType application/xml "access plus 1 hour"
+  ExpiresByType text/xml "access plus 1 hour"
+  
+  # Manifest y Service Worker - Sin caché
+  ExpiresByType application/manifest+json "access plus 0 seconds"
+  ExpiresByType text/cache-manifest "access plus 0 seconds"
+</IfModule>
+
+# Headers de caché adicionales
+<IfModule mod_headers.c>
+  # Agregar Cache-Control para imágenes
+  <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  
+  # CSS y JS con hash de Vite
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  
+  # Fuentes
+  <FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  
+  # HTML sin caché
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+</IfModule>
+
+# ============================================
+# 6. TIPOS MIME CORRECTOS
+# ============================================
+<IfModule mod_mime.c>
+  # JavaScript
+  AddType application/javascript js mjs
+  AddType text/javascript js mjs
+  
+  # JSON
+  AddType application/json json map
+  AddType application/manifest+json webmanifest
+  
+  # Imágenes
+  AddType image/svg+xml svg svgz
+  AddType image/webp webp
+  AddEncoding gzip svgz
+  
+  # Fuentes
+  AddType application/font-woff woff
+  AddType application/font-woff2 woff2
+  AddType font/woff woff
+  AddType font/woff2 woff2
+  AddType application/vnd.ms-fontobject eot
+  AddType font/ttf ttf
+  AddType font/otf otf
+  
+  # Otros
+  AddType text/css css
+  AddType text/html html htm
+  AddType application/pdf pdf
+</IfModule>
+
+# ============================================
+# 7. REACT ROUTER (SPA Routing)
+# ============================================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Si el archivo o directorio existe, servirlo directamente
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  
+  # Excluir archivos con extensión (assets)
+  RewriteCond %{REQUEST_URI} !\.(css|js|jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf|otf|eot|json|xml|txt|pdf|zip)$ [NC]
+  
+  # Redirigir todo al index.html (React Router)
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# ============================================
+# 8. PREVENIR HOTLINKING (Robo de imágenes)
+# ============================================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Permitir acceso directo y desde tu dominio
+  RewriteCond %{HTTP_REFERER} !^$
+  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?eventiadigital\.com [NC]
+  
+  # Bloquear imágenes (pero permitir desde motores de búsqueda)
+  RewriteCond %{HTTP_USER_AGENT} !^.*(google|bing|yahoo|duckduckgo).*$ [NC]
+  RewriteRule \.(jpg|jpeg|png|gif|webp|svg)$ - [F,L]
+</IfModule>
+
+# ============================================
+# 9. OPTIMIZACIÓN DE PERFORMANCE
+# ============================================
+
+# ETags (opcional - algunos recomiendan desactivarlos)
+FileETag MTime Size
+
+# Limitar tamaño de peticiones POST (protección contra ataques)
+LimitRequestBody 10485760
+
+# ============================================
+# 10. ERRORES PERSONALIZADOS (Opcional)
+# ============================================
+# ErrorDocument 404 /index.html
+# ErrorDocument 403 /index.html
+# ErrorDocument 500 /index.html
+
+# ============================================
+# NOTAS IMPORTANTES
+# ============================================
+# 1. Este archivo debe estar en la raíz del proyecto (donde está index.html)
+# 2. Después de modificar, limpia la caché del navegador
+# 3. Verifica que mod_rewrite esté habilitado en Hostinger
+# 4. Si algo falla, comenta secciones para identificar el problema
+# 5. Considera usar un CDN como Cloudflare para mejor performance
+# ============================================

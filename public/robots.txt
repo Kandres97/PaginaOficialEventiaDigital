@@ -1,26 +1,97 @@
 # robots.txt para Eventia Digital
 # https://eventiadigital.com
+# Última actualización: 2026-02-03
 
-# Permitir a todos los bots rastrear todo el sitio
+# ============================================
+# CONFIGURACIÓN GENERAL
+# ============================================
 User-agent: *
 Allow: /
 
-# Bloquear archivos y carpetas innecesarias
+# ============================================
+# PERMITIR PÁGINAS IMPORTANTES
+# ============================================
+
+# Colombia - Modelos
+Allow: /co/modelo/boda
+Allow: /co/modelo/15-anos
+Allow: /co/modelo/baby-shower
+Allow: /co/modelo/cumpleanos
+Allow: /co/modelo/comunion
+Allow: /co/modelo/egreso
+Allow: /co/modelo/bautizo
+Allow: /co/modelo/empresarial
+
+# España - Modelos
+Allow: /es/modelo/boda
+Allow: /es/modelo/15-anos
+Allow: /es/modelo/baby-shower
+Allow: /es/modelo/cumpleanos
+Allow: /es/modelo/comunion
+Allow: /es/modelo/egreso
+Allow: /es/modelo/bautizo
+Allow: /es/modelo/empresarial
+
+# ============================================
+# BLOQUEAR CONTENIDO INNECESARIO
+# ============================================
+
+# Archivos del sistema
 Disallow: /admin/
 Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
 
-# Permitir explícitamente las páginas importantes
-Allow: /modelo/boda
-Allow: /modelo/15-anos
-Allow: /modelo/baby-shower
-Allow: /modelo/cumpleanos
-Allow: /modelo/comunion
-Allow: /modelo/egreso
-Allow: /modelo/bautizo
-Allow: /modelo/empresarial
+# Archivos temporales y de desarrollo
+Disallow: /*.bak$
+Disallow: /*.tmp$
+Disallow: /*.log$
+Disallow: /*~$
 
-# Bloquear demos (contenido de muestra, no para indexar)
-Disallow: /demo/
+# Parámetros de tracking (opcional)
+Disallow: /*?utm_*
+Disallow: /*&utm_*
 
-# Sitemap
+# ============================================
+# DEMOS - PERMITIR INDEXACIÓN SELECTIVA
+# ============================================
+# Las demos son contenido valioso que muestra tus diseños
+# NO las bloquees completamente, Google puede penalizarte
+# por contenido thin o duplicado si tienes muchas páginas similares
+
+# Si quieres bloquear demos completamente (NO RECOMENDADO):
+# Disallow: /co/demo/
+# Disallow: /es/demo/
+
+# OPCIÓN RECOMENDADA: Permitir demos pero usar canonical
+# en cada demo apuntando a su página de modelo principal
+# (Esto se hace en el código React, no en robots.txt)
+
+# ============================================
+# CONFIGURACIÓN PARA BOTS ESPECÍFICOS
+# ============================================
+
+# Googlebot (configuración específica)
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# ============================================
+# SITEMAPS
+# ============================================
 Sitemap: https://eventiadigital.com/sitemap.xml
+Sitemap: https://eventiadigital.com/sitemap-images.xml
+
+# ============================================
+# NOTAS IMPORTANTES
+# ============================================
+# 1. Este robots.txt debe estar en la raíz del dominio
+# 2. Verifica en Google Search Console que esté funcionando
+# 3. Las demos NO deberían bloquearse completamente
+# 4. Usa canonical tags en demos apuntando a páginas principales
+# 5. Considera crear un sitemap específico para demos
