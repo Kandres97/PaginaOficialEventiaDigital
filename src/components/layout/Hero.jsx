@@ -127,7 +127,7 @@ const Hero = () => {
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-[#B88B80]/30 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                 <div className="relative bg-white/70 backdrop-blur-xl border border-[#B88B80]/20 rounded-2xl p-5 hover:bg-white/90 hover:shadow-xl transition-all duration-300">
-                  <div className="text-4xl font-black bg-gradient-to-br from-[#B88B80] to-[#8B7B76] bg-clip-text text-transparent">500+</div>
+                  <div className="text-4xl font-black bg-gradient-to-br from-[#B88B80] to-[#8B7B76] bg-clip-text text-transparent">+500</div>
                   <div className="text-xs text-gray-600 mt-2 tracking-wider uppercase font-semibold">Eventos</div>
                 </div>
               </div>

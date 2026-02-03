@@ -14,8 +14,8 @@ const Galeria = () => {
   // GIFs por tipo de evento
   const eventGifs = {
     boda: "/assets/images/paginaoficial/boda.gif",
-    '15-anos': "/assets/images/paginaoficial/15.gif",
-    'baby-shower': "/assets/images/paginaoficial/babyshower.gif",
+    '15anos': "/assets/images/paginaoficial/15.gif",
+    'babyshower': "/assets/images/paginaoficial/babyshower.gif",
     cumpleanos: "/assets/images/paginaoficial/cumpleaños.gif",
     comunion: "/assets/images/paginaoficial/comunion.gif",
     egreso: "/assets/images/paginaoficial/graduacion.gif",
