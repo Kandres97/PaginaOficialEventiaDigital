@@ -1,259 +1,222 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <!-- ============================================ -->
-  <!-- PÁGINAS PRINCIPALES -->
-  <!-- ============================================ -->
-  
-  <!-- Home Principal (Redirige a /co por defecto) -->
-  <url>
-    <loc>https://eventiadigital.com/</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://eventiadigital.com/co" />
-  </url>
-  
-  <!-- Home Colombia -->
-  <url>
-    <loc>https://eventiadigital.com/co</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://eventiadigital.com/co" />
-  </url>
-  
-  <!-- Home España -->
-  <url>
-    <loc>https://eventiadigital.com/es</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://eventiadigital.com/co" />
-  </url>
-  
-  <!-- ============================================ -->
-  <!-- COLOMBIA - MODELOS -->
-  <!-- ============================================ -->
-  
-  <url>
-    <loc>https://eventiadigital.com/co/modelo/boda</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/boda" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/boda" />
-    <image:image>
-      <image:loc>https://eventiadigital.com/assets/modelos/boda-preview.jpg</image:loc>
-      <image:title>Invitaciones digitales de boda elegantes</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://eventiadigital.com/co/modelo/15-anos</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/15-anos" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/15-anos" />
-    <image:image>
-      <image:loc>https://eventiadigital.com/assets/modelos/15anos-preview.jpg</image:loc>
-      <image:title>Invitaciones digitales de quinceañera</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://eventiadigital.com/co/modelo/baby-shower</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/baby-shower" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/baby-shower" />
-    <image:image>
-      <image:loc>https://eventiadigital.com/assets/modelos/babyshower-preview.jpg</image:loc>
-      <image:title>Invitaciones digitales de baby shower</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://eventiadigital.com/co/modelo/cumpleanos</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/cumpleanos" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/cumpleanos" />
-    <image:image>
-      <image:loc>https://eventiadigital.com/assets/modelos/cumpleanos-preview.jpg</image:loc>
-      <image:title>Invitaciones digitales de cumpleaños</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://eventiadigital.com/co/modelo/comunion</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/comunion" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/comunion" />
-    <image:image>
-      <image:loc>https://eventiadigital.com/assets/modelos/comunion-preview.jpg</image:loc>
-      <image:title>Invitaciones digitales de primera comunión</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://eventiadigital.com/co/modelo/egreso</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/egreso" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/egreso" />
-    <image:image>
-      <image:loc>https://eventiadigital.com/assets/modelos/egreso-preview.jpg</image:loc>
-      <image:title>Invitaciones digitales de grado</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://eventiadigital.com/co/modelo/bautizo</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/bautizo" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/bautizo" />
-    <image:image>
-      <image:loc>https://eventiadigital.com/assets/modelos/bautizo-preview.jpg</image:loc>
-      <image:title>Invitaciones digitales de bautizo</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://eventiadigital.com/co/modelo/empresarial</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/empresarial" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/empresarial" />
-    <image:image>
-      <image:loc>https://eventiadigital.com/assets/modelos/empresarial-preview.jpg</image:loc>
-      <image:title>Invitaciones digitales corporativas</image:title>
-    </image:image>
-  </url>
-  
-  <!-- ============================================ -->
-  <!-- ESPAÑA - MODELOS -->
-  <!-- ============================================ -->
-  
-  <url>
-    <loc>https://eventiadigital.com/es/modelo/boda</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/boda" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/boda" />
-    <image:image>
-      <image:loc>https://eventiadigital.com/assets/modelos/boda-preview.jpg</image:loc>
-      <image:title>Invitaciones digitales de boda elegantes</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://eventiadigital.com/es/modelo/15-anos</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/15-anos" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/15-anos" />
-    <image:image>
-      <image:loc>https://eventiadigital.com/assets/modelos/15anos-preview.jpg</image:loc>
-      <image:title>Invitaciones digitales de quinceañera</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://eventiadigital.com/es/modelo/baby-shower</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/baby-shower" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/baby-shower" />
-    <image:image>
-      <image:loc>https://eventiadigital.com/assets/modelos/babyshower-preview.jpg</image:loc>
-      <image:title>Invitaciones digitales de baby shower</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://eventiadigital.com/es/modelo/cumpleanos</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/cumpleanos" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/cumpleanos" />
-    <image:image>
-      <image:loc>https://eventiadigital.com/assets/modelos/cumpleanos-preview.jpg</image:loc>
-      <image:title>Invitaciones digitales de cumpleaños</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://eventiadigital.com/es/modelo/comunion</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/comunion" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/comunion" />
-    <image:image>
-      <image:loc>https://eventiadigital.com/assets/modelos/comunion-preview.jpg</image:loc>
-      <image:title>Invitaciones digitales de primera comunión</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://eventiadigital.com/es/modelo/egreso</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/egreso" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/egreso" />
-    <image:image>
-      <image:loc>https://eventiadigital.com/assets/modelos/egreso-preview.jpg</image:loc>
-      <image:title>Invitaciones digitales de grado</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://eventiadigital.com/es/modelo/bautizo</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/bautizo" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/bautizo" />
-    <image:image>
-      <image:loc>https://eventiadigital.com/assets/modelos/bautizo-preview.jpg</image:loc>
-      <image:title>Invitaciones digitales de bautizo</image:title>
-    </image:image>
-  </url>
-  
-  <url>
-    <loc>https://eventiadigital.com/es/modelo/empresarial</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/empresarial" />
-    <xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/empresarial" />
-    <image:image>
-      <image:loc>https://eventiadigital.com/assets/modelos/empresarial-preview.jpg</image:loc>
-      <image:title>Invitaciones digitales corporativas</image:title>
-    </image:image>
-  </url>
-  
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+<loc>https://eventiadigital.com/</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://eventiadigital.com/co"/>
+</url>
+<url>
+<loc>https://eventiadigital.com/co</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://eventiadigital.com/co"/>
+</url>
+<url>
+<loc>https://eventiadigital.com/es</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es"/>
+<xhtml:link rel="alternate" hreflang="x-default" href="https://eventiadigital.com/co"/>
+</url>
+<url>
+<loc>https://eventiadigital.com/co/modelo/boda</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/boda"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/boda"/>
+<image:image>
+<image:loc>https://eventiadigital.com/assets/modelos/boda-preview.jpg</image:loc>
+<image:title>Invitaciones digitales de boda elegantes</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://eventiadigital.com/co/modelo/15-anos</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/15-anos"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/15-anos"/>
+<image:image>
+<image:loc>https://eventiadigital.com/assets/modelos/15anos-preview.jpg</image:loc>
+<image:title>Invitaciones digitales de quinceañera</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://eventiadigital.com/co/modelo/baby-shower</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/baby-shower"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/baby-shower"/>
+<image:image>
+<image:loc>https://eventiadigital.com/assets/modelos/babyshower-preview.jpg</image:loc>
+<image:title>Invitaciones digitales de baby shower</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://eventiadigital.com/co/modelo/cumpleanos</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/cumpleanos"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/cumpleanos"/>
+<image:image>
+<image:loc>https://eventiadigital.com/assets/modelos/cumpleanos-preview.jpg</image:loc>
+<image:title>Invitaciones digitales de cumpleaños</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://eventiadigital.com/co/modelo/comunion</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/comunion"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/comunion"/>
+<image:image>
+<image:loc>https://eventiadigital.com/assets/modelos/comunion-preview.jpg</image:loc>
+<image:title>Invitaciones digitales de primera comunión</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://eventiadigital.com/co/modelo/egreso</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/egreso"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/egreso"/>
+<image:image>
+<image:loc>https://eventiadigital.com/assets/modelos/egreso-preview.jpg</image:loc>
+<image:title>Invitaciones digitales de grado</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://eventiadigital.com/co/modelo/bautizo</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/bautizo"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/bautizo"/>
+<image:image>
+<image:loc>https://eventiadigital.com/assets/modelos/bautizo-preview.jpg</image:loc>
+<image:title>Invitaciones digitales de bautizo</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://eventiadigital.com/co/modelo/empresarial</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/empresarial"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/empresarial"/>
+<image:image>
+<image:loc>https://eventiadigital.com/assets/modelos/empresarial-preview.jpg</image:loc>
+<image:title>Invitaciones digitales corporativas</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://eventiadigital.com/es/modelo/boda</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/boda"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/boda"/>
+<image:image>
+<image:loc>https://eventiadigital.com/assets/modelos/boda-preview.jpg</image:loc>
+<image:title>Invitaciones digitales de boda elegantes</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://eventiadigital.com/es/modelo/15-anos</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/15-anos"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/15-anos"/>
+<image:image>
+<image:loc>https://eventiadigital.com/assets/modelos/15anos-preview.jpg</image:loc>
+<image:title>Invitaciones digitales de quinceañera</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://eventiadigital.com/es/modelo/baby-shower</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/baby-shower"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/baby-shower"/>
+<image:image>
+<image:loc>https://eventiadigital.com/assets/modelos/babyshower-preview.jpg</image:loc>
+<image:title>Invitaciones digitales de baby shower</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://eventiadigital.com/es/modelo/cumpleanos</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/cumpleanos"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/cumpleanos"/>
+<image:image>
+<image:loc>https://eventiadigital.com/assets/modelos/cumpleanos-preview.jpg</image:loc>
+<image:title>Invitaciones digitales de cumpleaños</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://eventiadigital.com/es/modelo/comunion</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/comunion"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/comunion"/>
+<image:image>
+<image:loc>https://eventiadigital.com/assets/modelos/comunion-preview.jpg</image:loc>
+<image:title>Invitaciones digitales de primera comunión</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://eventiadigital.com/es/modelo/egreso</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/egreso"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/egreso"/>
+<image:image>
+<image:loc>https://eventiadigital.com/assets/modelos/egreso-preview.jpg</image:loc>
+<image:title>Invitaciones digitales de grado</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://eventiadigital.com/es/modelo/bautizo</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/bautizo"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/bautizo"/>
+<image:image>
+<image:loc>https://eventiadigital.com/assets/modelos/bautizo-preview.jpg</image:loc>
+<image:title>Invitaciones digitales de bautizo</image:title>
+</image:image>
+</url>
+<url>
+<loc>https://eventiadigital.com/es/modelo/empresarial</loc>
+<lastmod>2026-02-03</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+<xhtml:link rel="alternate" hreflang="es-CO" href="https://eventiadigital.com/co/modelo/empresarial"/>
+<xhtml:link rel="alternate" hreflang="es-ES" href="https://eventiadigital.com/es/modelo/empresarial"/>
+<image:image>
+<image:loc>https://eventiadigital.com/assets/modelos/empresarial-preview.jpg</image:loc>
+<image:title>Invitaciones digitales corporativas</image:title>
+</image:image>
+</url>
 </urlset>
