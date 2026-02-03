@@ -1,3 +1,5 @@
+// src/components/SEO.jsx - VERSIÓN MEJORADA
+
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
@@ -11,30 +13,37 @@ export default function SEO({
 }) {
   const location = useLocation();
   
-  // 🔥 DETECTAR PAÍS ACTUAL
+  // Detectar país actual
   const paisActual = location.pathname.startsWith('/es') ? 'es' : 'co';
   
   const fullTitle = title.includes('Eventia') ? title : `${title} | Eventia Digital`;
   const siteName = "Eventia Digital";
   const twitterHandle = "@eventiadigital";
   
-  // 🌍 GENERAR URLs ALTERNATIVAS PARA HREFLANG
+  // 🔧 GENERAR URLs ALTERNATIVAS - VERSIÓN CORREGIDA
   const generateAlternateUrl = (country) => {
-    // Si la URL es la raíz
+    // Caso 1: URL raíz
     if (canonical === 'https://eventiadigital.com/' || 
         canonical === 'https://eventiadigital.com/co' || 
         canonical === 'https://eventiadigital.com/es') {
       return `https://eventiadigital.com/${country}`;
     }
     
-    // Si es una página interna, reemplazar el país
-    return canonical.replace(/\/(co|es)\//, `/${country}/`);
+    // Caso 2: URL con país (/co/ o /es/)
+    if (canonical.includes('/co/') || canonical.includes('/es/')) {
+      return canonical.replace(/\/(co|es)\//, `/${country}/`);
+    }
+    
+    // Caso 3: URL sin país (fallback - no debería pasar, pero por seguridad)
+    const baseUrl = 'https://eventiadigital.com';
+    const path = canonical.replace(baseUrl, '').replace(/^\//, '');
+    return `${baseUrl}/${country}/${path}`;
   };
   
-  // 🌐 LOCALE DINÁMICO SEGÚN PAÍS
+  // Locale dinámico
   const ogLocale = paisActual === 'es' ? 'es_ES' : 'es_CO';
   
-  // 📊 SCHEMA.ORG MEJORADO
+  // Schema.org
   const schemaData = {
     "@context": "https://schema.org",
     "@type": type === "product" ? "Product" : "WebPage",
@@ -85,14 +94,14 @@ export default function SEO({
     })
   };
   
-  // 🍞 BREADCRUMBS MEJORADO
+  // 🔧 BREADCRUMBS - VERSIÓN CORREGIDA
   const generateBreadcrumbs = () => {
     const pathParts = canonical.split('/').filter(Boolean);
     
-    // Solo generar breadcrumbs si hay más de 3 partes (dominio + país + algo más)
+    // Solo generar breadcrumbs si hay más de 3 partes
     if (pathParts.length < 3) return null;
     
-    // Filtrar 'https:', dominio y país
+    // Filtrar protocolo, dominio y país
     const breadcrumbParts = pathParts.slice(2);
     
     return {
@@ -110,9 +119,9 @@ export default function SEO({
           "position": index + 2,
           "name": part
             .replace(/-/g, ' ')
-            .replace(/^\w/, c => c.toUpperCase())
-            .replace(/\b(15|anos)\b/gi, (match) => 
-              match.toLowerCase() === '15' ? '15' : 'años'
+            .replace(/\b\w/g, c => c.toUpperCase())  // ← Capitaliza cada palabra
+            .replace(/\b(15|Anos)\b/gi, (match) => 
+              match === '15' ? '15' : match.toLowerCase() === 'anos' ? 'Años' : match
             ),
           "item": `https://eventiadigital.com/${paisActual}/${breadcrumbParts.slice(0, index + 1).join('/')}`
         }))
@@ -131,10 +140,10 @@ export default function SEO({
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       
-      {/* 🎯 CANONICAL TAG */}
+      {/* Canonical */}
       <link rel="canonical" href={canonical} />
       
-      {/* 🌍 HREFLANG - MULTI-PAÍS */}
+      {/* Hreflang */}
       <link 
         rel="alternate" 
         hreflang="es-CO" 
@@ -151,14 +160,14 @@ export default function SEO({
         href="https://eventiadigital.com/" 
       />
       
-      {/* Meta robots para indexación */}
+      {/* Robots */}
       <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
       
       {/* Geo tags */}
       <meta name="geo.region" content={paisActual === 'es' ? 'ES' : 'CO'} />
       <meta name="geo.placename" content={paisActual === 'es' ? 'España' : 'Colombia'} />
       
-      {/* Open Graph / Facebook / WhatsApp */}
+      {/* Open Graph */}
       <meta property="og:locale" content={ogLocale} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={canonical} />
@@ -182,15 +191,14 @@ export default function SEO({
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:image:alt" content={title} />
       
-      {/* Schema.org JSON-LD - Organización */}
+      {/* Schema.org - Página/Producto */}
       <script type="application/ld+json">
         {JSON.stringify(schemaData)}
       </script>
       
-      {/* Schema.org JSON-LD - WebSite (solo en home) */}
+      {/* Schema.org - WebSite (solo home) */}
       {(canonical === 'https://eventiadigital.com/' || 
-        canonical === 'https://eventiadigital.com/co' || 
-        canonical === 'https://eventiadigital.com/es') && (
+        canonical === `https://eventiadigital.com/${paisActual}`) && (
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -209,7 +217,7 @@ export default function SEO({
         </script>
       )}
       
-      {/* Breadcrumbs Schema (si aplica) */}
+      {/* Breadcrumbs */}
       {breadcrumbSchema && (
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}

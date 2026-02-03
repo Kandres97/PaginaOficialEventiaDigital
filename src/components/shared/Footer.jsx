@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { getConfig } from '../../config/locales';
-import logo from "../../assets/logo eventia-02.png";
+import logo from "/assets/images/paginaoficial/logo-eventia.png";
 
 const Footer = () => {
   const [modalContent, setModalContent] = useState(null);
