@@ -1,0 +1,341 @@
+PAGINAOFICIALEVENTIADIGITAL/
+├── dist/
+├── node_modules/
+├── public/
+│   ├── assets/
+│   ├── .htaccess
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   └── vite.svg
+│
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── index.css
+│   │
+│   ├── assets/
+│   │   └── demos/
+│   │       ├── classic/
+│   │       │   ├── Classic15anos/
+│   │       │   │   ├── Quince1/
+│   │       │   │   ├── Quince2/
+│   │       │   │   ├── Quince3/
+│   │       │   │   └── Quince4/
+│   │       │   ├── Classicbabyshower/
+│   │       │   │   ├── baby1/
+│   │       │   │   ├── baby2/
+│   │       │   │   ├── baby3/
+│   │       │   │   └── baby4/
+│   │       │   ├── Classicbautizo/
+│   │       │   │   ├── bautizo1/
+│   │       │   │   ├── bautizo2/
+│   │       │   │   ├── bautizo3/
+│   │       │   │   └── bautizo4/
+│   │       │   ├── Classicboda/
+│   │       │   │   ├── boda1/
+│   │       │   │   ├── boda2/
+│   │       │   │   ├── boda3/
+│   │       │   │   └── boda4/
+│   │       │   ├── Classiccomunion/
+│   │       │   │   ├── comunion1/
+│   │       │   │   ├── comunion2/
+│   │       │   │   ├── comunion3/
+│   │       │   │   └── comunion4/
+│   │       │   ├── Classiccumple/
+│   │       │   │   ├── cumple1/
+│   │       │   │   ├── cumple2/
+│   │       │   │   ├── cumple3/
+│   │       │   │   └── cumple4/
+│   │       │   ├── Classicegreso/
+│   │       │   │   ├── egreso1/
+│   │       │   │   ├── egreso2/
+│   │       │   │   ├── egreso3/
+│   │       │   │   └── egreso4/
+│   │       │   └── Classicempresarial/
+│   │       │       ├── empresarial1/
+│   │       │       ├── empresarial2/
+│   │       │       ├── empresarial3/
+│   │       │       └── empresarial4/
+│   │       │
+│   │       └── website/
+│   │           ├── 15años/
+│   │           │   ├── Quince1/
+│   │           │   ├── Quince2/
+│   │           │   ├── Quince3/
+│   │           │   └── Quince4/
+│   │           ├── babyshower/
+│   │           │   ├── baby1/
+│   │           │   ├── baby2/
+│   │           │   ├── baby3/
+│   │           │   └── baby4/
+│   │           ├── bautizo/
+│   │           │   ├── bautizo1/
+│   │           │   ├── bautizo2/
+│   │           │   ├── bautizo3/
+│   │           │   └── bautizo4/
+│   │           ├── boda/
+│   │           │   ├── boda1/
+│   │           │   │   ├── animations/
+│   │           │   │   │   ├── bell.gif
+│   │           │   │   │   ├── cheers.gif
+│   │           │   │   │   ├── gift.gif
+│   │           │   │   │   ├── money.gif
+│   │           │   │   │   ├── output-onlinegiftools.gif
+│   │           │   │   │   └── wallet.gif
+│   │           │   │   ├── audio/
+│   │           │   │   │   └── cancion1.mp3
+│   │           │   │   ├── images/
+│   │           │   │   │   ├── fondo.webp
+│   │           │   │   │   ├── foto1.webp
+│   │           │   │   │   ├── foto2.webp
+│   │           │   │   │   ├── foto3.webp
+│   │           │   │   │   ├── foto4.webp
+│   │           │   │   │   ├── foto5.webp
+│   │           │   │   │   ├── foto6.webp
+│   │           │   │   │   ├── logo eventia-02.png
+│   │           │   │   │   ├── mockup.png
+│   │           │   │   │   ├── preboda1.webp
+│   │           │   │   │   ├── Recurso-1Sobres-copia-scaled.webp
+│   │           │   │   │   ├── Recurso-2Sobres-copia-scaled.webp
+│   │           │   │   │   ├── SELLO-VERDE.webp
+│   │           │   │   │   └── wedding-dress.png
+│   │           │   │   ├── json/
+│   │           │   │   │   ├── Animación de bebé (solo adultos).json
+│   │           │   │   │   ├── Animación de fotos.json
+│   │           │   │   │   ├── Confirmation.json
+│   │           │   │   │   ├── corazon.json
+│   │           │   │   │   ├── Digital Camera.json
+│   │           │   │   │   ├── heart-animation.json
+│   │           │   │   │   ├── pareja.json
+│   │           │   │   │   └── rings-animation.json
+│   │           │   │   └── svg/
+│   │           │   │       └── Recurso-2Adornos-Allegria.svg
+│   │           │   ├── boda2/
+│   │           │   ├── boda3/
+│   │           │   └── boda4/
+│   │           ├── comunion/
+│   │           │   ├── comunion1/
+│   │           │   ├── comunion2/
+│   │           │   ├── comunion3/
+│   │           │   └── comunion4/
+│   │           ├── cumpleanos/
+│   │           │   ├── cumple1/
+│   │           │   ├── cumple2/
+│   │           │   ├── cumple3/
+│   │           │   └── cumple4/
+│   │           ├── egreso/
+│   │           │   ├── egreso1/
+│   │           │   ├── egreso2/
+│   │           │   ├── egreso3/
+│   │           │   └── egreso4/
+│   │           └── empresarial/
+│   │               ├── empresarial1/
+│   │               ├── empresarial2/
+│   │               ├── empresarial3/
+│   │               └── empresarial4/
+│   │
+│   ├── components/
+│   │   ├── demos/
+│   │   │   ├── classic/
+│   │   │   │   ├── 15anos/
+│   │   │   │   │   ├── 15anos1/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   ├── 15anos2/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   ├── 15anos3/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   └── 15anos4/
+│   │   │   │   │       └── index.jsx
+│   │   │   │   ├── babyshower/
+│   │   │   │   │   ├── babyshower1/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   ├── babyshower2/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   ├── babyshower3/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   └── babyshower4/
+│   │   │   │   │       └── index.jsx
+│   │   │   │   ├── bautizo/
+│   │   │   │   │   ├── bautizo1/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   ├── bautizo2/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   ├── bautizo3/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   └── bautizo4/
+│   │   │   │   │       └── index.jsx
+│   │   │   │   ├── boda/
+│   │   │   │   │   ├── boda1/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   ├── boda2/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   ├── boda3/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   └── boda4/
+│   │   │   │   │       └── index.jsx
+│   │   │   │   ├── comunion/
+│   │   │   │   │   ├── comunion1/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   ├── comunion2/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   ├── comunion3/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   └── comunion4/
+│   │   │   │   │       └── index.jsx
+│   │   │   │   ├── cumpleanos/
+│   │   │   │   │   ├── cumpleanos1/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   ├── cumpleanos2/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   ├── cumpleanos3/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   └── cumpleanos4/
+│   │   │   │   │       └── index.jsx
+│   │   │   │   ├── egreso/
+│   │   │   │   │   ├── egreso1/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   ├── egreso2/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   ├── egreso3/
+│   │   │   │   │   │   └── index.jsx
+│   │   │   │   │   └── egreso4/
+│   │   │   │   │       └── index.jsx
+│   │   │   │   └── empresarial/
+│   │   │   │       ├── empresarial1/
+│   │   │   │       │   └── index.jsx
+│   │   │   │       ├── empresarial2/
+│   │   │   │       │   └── index.jsx
+│   │   │   │       ├── empresarial3/
+│   │   │   │       │   └── index.jsx
+│   │   │   │       └── empresarial4/
+│   │   │   │           └── index.jsx
+│   │   │   │
+│   │   │   └── website/
+│   │   │       ├── 15anos/
+│   │   │       │   ├── 15anos1/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   ├── 15anos2/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   ├── 15anos3/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   └── 15anos4/
+│   │   │       │       └── index.jsx
+│   │   │       ├── babyshower/
+│   │   │       │   ├── babyshower1/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   ├── babyshower2/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   ├── babyshower3/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   └── babyshower4/
+│   │   │       │       └── index.jsx
+│   │   │       ├── bautizo/
+│   │   │       │   ├── bautizo1/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   ├── bautizo2/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   ├── bautizo3/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   └── bautizo4/
+│   │   │       │       └── index.jsx
+│   │   │       ├── boda/
+│   │   │       │   ├── boda1/
+│   │   │       │   │   ├── Compartirfotos.jsx
+│   │   │       │   │   ├── ConfirmacionAsistencia.jsx
+│   │   │       │   │   ├── FooterPremium.jsx
+│   │   │       │   │   ├── Galeria.jsx
+│   │   │       │   │   ├── Hero.jsx
+│   │   │       │   │   ├── index.jsx
+│   │   │       │   │   ├── InvitationContent.jsx
+│   │   │       │   │   ├── Mesaderegalos.jsx
+│   │   │       │   │   ├── Ubicacion.jsx
+│   │   │       │   │   └── WeddingDate.jsx
+│   │   │       │   ├── boda2/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   ├── boda3/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   └── boda4/
+│   │   │       │       └── index.jsx
+│   │   │       ├── comunion/
+│   │   │       │   ├── comunion1/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   ├── comunion2/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   ├── comunion3/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   └── comunion4/
+│   │   │       │       └── index.jsx
+│   │   │       ├── cumpleanos/
+│   │   │       │   ├── cumpleanos1/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   ├── cumpleanos2/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   ├── cumpleanos3/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   └── cumpleanos4/
+│   │   │       │       └── index.jsx
+│   │   │       ├── egreso/
+│   │   │       │   ├── egreso1/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   ├── egreso2/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   ├── egreso3/
+│   │   │       │   │   └── index.jsx
+│   │   │       │   └── egreso4/
+│   │   │       │       └── index.jsx
+│   │   │       └── empresarial/
+│   │   │           ├── empresarial1/
+│   │   │           │   └── index.jsx
+│   │   │           ├── empresarial2/
+│   │   │           │   └── index.jsx
+│   │   │           ├── empresarial3/
+│   │   │           │   └── index.jsx
+│   │   │           └── empresarial4/
+│   │   │               └── index.jsx
+│   │   │
+│   │   ├── layout/
+│   │   │   ├── ComoFunciona.jsx
+│   │   │   ├── Contacto.jsx
+│   │   │   ├── Galeria.jsx
+│   │   │   ├── Hero.jsx
+│   │   │   ├── Planes.jsx
+│   │   │   ├── PreguntasFrecuentes.jsx
+│   │   │   └── Testimonios.jsx
+│   │   │
+│   │   ├── shared/
+│   │   │   ├── Footer.jsx
+│   │   │   ├── LoadingSpinner.jsx
+│   │   │   └── navbar.jsx
+│   │   │
+│   │   ├── CountryRedirect.jsx
+│   │   └── SEO.jsx
+│   │
+│   ├── config/
+│   │   ├── eventModelsConfig.js
+│   │   ├── locales.js
+│   │   └── routesConfig.js
+│   │
+│   ├── pages/
+│   │   ├── BabyShower.jsx
+│   │   ├── Bautizo.jsx
+│   │   ├── Boda.jsx
+│   │   ├── Comunion.jsx
+│   │   ├── Cumpleanos.jsx
+│   │   ├── Egreso.jsx
+│   │   ├── Empresarial.jsx
+│   │   ├── EventModelPage.jsx
+│   │   └── QuinceAnos.jsx
+│   │
+│   └── utils/
+│       └── imageLoader.js
+│
+├── .gitignore
+├── compress-lottie.mjs
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── README.md
+├── tailwind.config.js
+└── vite.config.js

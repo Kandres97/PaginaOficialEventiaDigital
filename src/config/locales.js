@@ -7,9 +7,10 @@ export const locales = {
     bandera: "🇨🇴",
     idioma: "es",
     telefono: "+57 322 829 4382",
-    whatsapp: "573228294382",
+    whatsapp: "573228294382", // Tu número real
     region: "Colombia y América Latina",
-    mensajeWhatsApp: "¡Hola! Me interesa una invitación digital. ¿Podrían darme más información?"
+    // Mensaje personalizado para Colombia
+    mensajeWhatsApp: "¡Hola Eventia Digital! 🎉 Me interesa una invitación digital para mi evento en Colombia. ¿Podrían darme más información?"
   },
   
   es: {
@@ -17,10 +18,11 @@ export const locales = {
     codigo: "ES",
     bandera: "🇪🇸",
     idioma: "es",
-    telefono: "+34 XXX XXX XXX",
-    whatsapp: "34XXXXXXXXX",
+    telefono: "+57 322 829 4382", // Mismo número colombiano
+    whatsapp: "573228294382", // MISMO número colombiano
     region: "España y Europa",
-    mensajeWhatsApp: "¡Hola! Me interesan las invitaciones digitales. ¿Podríais darme más información?"
+    // Mensaje personalizado para España
+    mensajeWhatsApp: "¡Hola Eventia Digital! 🎉 Me interesa una invitación digital para mi evento en España. ¿Podríais darme más información?"
   }
 };
 
