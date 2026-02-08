@@ -127,7 +127,7 @@ const EventModelPage = ({ eventConfig }) => {
                         {modelo.preview && modelo.thumbnail && (
                           <img 
                             src={modelo.preview}
-                            alt={`Vista previa completa de ${modelo.nombre}`}
+                            alt={modelo.nombre}
                             className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105"
                             loading="lazy"
                           />

@@ -50,8 +50,8 @@ export const eventModelsConfig = {
     modelosClassic: (paisActual) => [
       { 
         nombre: 'Classic Elegante', 
-        thumbnail: null,
-        preview: null,
+        thumbnail: '/assets/images/demos/classic/boda/boda1/thumbnail.webp',
+        preview: '/assets/images/demos/classic/boda/boda1/Preview.webp',
         demoUrl: `/${paisActual}/demo/classic/boda/elegante`
       },
       { 
@@ -106,7 +106,7 @@ export const eventModelsConfig = {
     ],
     
     modelosClassic: (paisActual) => [
-      { nombre: 'Classic Elegante', thumbnail: null, preview: null, demoUrl: `/${paisActual}/demo/classic/15anos/elegante` },
+      
       { nombre: 'Classic Romántico', thumbnail: null, preview: null, demoUrl: `/${paisActual}/demo/classic/15anos/romantico` },
       { nombre: 'Classic Moderno', thumbnail: null, preview: null, demoUrl: `/${paisActual}/demo/classic/15anos/moderno` },
       { nombre: 'Classic Princess', thumbnail: null, preview: null, demoUrl: `/${paisActual}/demo/classic/15anos/princess` }
@@ -217,7 +217,7 @@ export const eventModelsConfig = {
     ],
     
     modelosClassic: (paisActual) => [
-      { nombre: 'Classic Elegante', thumbnail: null, preview: null, demoUrl: `/${paisActual}/demo/classic/comunion/elegante` },
+     
       { nombre: 'Classic Religioso', thumbnail: null, preview: null, demoUrl: `/${paisActual}/demo/classic/comunion/religioso` },
       { nombre: 'Classic Moderno', thumbnail: null, preview: null, demoUrl: `/${paisActual}/demo/classic/comunion/moderno` },
       { nombre: 'Classic Espiritual', thumbnail: null, preview: null, demoUrl: `/${paisActual}/demo/classic/comunion/espiritual` }
@@ -254,7 +254,7 @@ export const eventModelsConfig = {
     ],
     
     modelosClassic: (paisActual) => [
-      { nombre: 'Classic Elegante', thumbnail: null, preview: null, demoUrl: `/${paisActual}/demo/classic/egreso/elegante` },
+    
       { nombre: 'Classic Profesional', thumbnail: null, preview: null, demoUrl: `/${paisActual}/demo/classic/egreso/profesional` },
       { nombre: 'Classic Moderno', thumbnail: null, preview: null, demoUrl: `/${paisActual}/demo/classic/egreso/moderno` },
       { nombre: 'Classic Sobrio', thumbnail: null, preview: null, demoUrl: `/${paisActual}/demo/classic/egreso/sobrio` }
