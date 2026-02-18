@@ -65,6 +65,9 @@ const EventModelPage = ({ eventConfig }) => {
             </div>
 
             {/* Toggle Website/Classic - Mismo estilo que Galería */}
+            <p className="text-center text-sm text-gray-500 mb-3">
+  Elige el formato que prefieras — <strong className="text-[#B88B80]">Website</strong> o <strong className="text-[#A69B97]">Classic</strong>, ambos están disponibles para ti
+</p>
             <div 
               className="flex justify-center mb-12 sm:mb-16"
               style={{ animation: 'fadeInUp 0.6s ease-out 0.6s both' }}

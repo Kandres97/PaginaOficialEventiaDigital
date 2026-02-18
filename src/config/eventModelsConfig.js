@@ -136,7 +136,7 @@ export const eventModelsConfig = {
     mensajeWhatsApp: '¡Hola! Me interesa una invitación digital para mi baby shower. ¿Podrían darme más información?',
     
     modelosWebsite: (paisActual) => [
-      { nombre: 'Sweet Baby', thumbnail: '/assets/images/demos/website/babyshower/baby1/thumbnail.webp', preview: '/assets/images/demos/website/babyshower/baby1/preview.webp', demoUrl: `/${paisActual}/demo/babyshower/sweet-baby` },
+      { nombre: 'Sweet Baby', thumbnail: '/assets/images/demos/website/babyshower/baby1/thumbnail.webp', preview: '/assets/images/demos/website/babyshower/baby1/preview.webp', demoUrl: `/${paisActual}/demo/babyshower/baby1` },
       { nombre: 'Little Star', thumbnail: null, preview: null, demoUrl: `/${paisActual}/demo/babyshower/little-star` },
       { nombre: 'Baby Love', thumbnail: null, preview: null, demoUrl: `/${paisActual}/demo/babyshower/baby-love` },
       { nombre: 'Tiny Feet', thumbnail: null, preview: null, demoUrl: `/${paisActual}/demo/babyshower/tiny-feet` }
