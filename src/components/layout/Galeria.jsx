@@ -106,6 +106,10 @@ const Galeria = () => {
           </h2>
         </div>
 
+        <p className="text-center text-sm text-gray-500 mb-4">
+  👇 Selecciona el tipo de evento que deseas
+</p>
+
         {/* Event Type Filters */}
         <div 
           className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8"
@@ -142,6 +146,11 @@ const Galeria = () => {
             </button>
           ))}
         </div>
+
+<p className="text-center text-sm text-gray-500 mb-3">
+  Elige el formato que prefieras — <strong className="text-[#B88B80]">Website</strong> o <strong className="text-[#A69B97]">Classic</strong>, ambos están disponibles para ti
+</p>
+
 
         {/* Variant Toggle */}
         <div 
@@ -326,7 +335,7 @@ const Galeria = () => {
       </div>
 
       {/* CSS Animations */}
-      <style jsx>{`
+      <style>{`
         @keyframes fadeInUp {
           from {
             opacity: 0;

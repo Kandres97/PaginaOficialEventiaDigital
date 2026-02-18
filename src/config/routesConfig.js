@@ -15,7 +15,7 @@ export const demosConfig = {
       { id: 'boda4', name: 'Paradise', slug: 'paradise' }
     ],
     classic: [
-      { id: 'classic-boda1', name: 'Elegante', slug: 'elegante' },
+      { id: 'classic-boda1', name: 'Elegante', slug: 'boda1' },
       { id: 'classic-boda2', name: 'Romántico', slug: 'romantico' },
       { id: 'classic-boda3', name: 'Moderno', slug: 'moderno' },
       { id: 'classic-boda4', name: 'Floral', slug: 'floral' }
@@ -41,7 +41,7 @@ export const demosConfig = {
     label: 'Baby Shower',
     emoji: '👶',
     website: [
-      { id: 'baby1', name: 'Sweet Baby', slug: 'sweet-baby' },
+      { id: 'baby1', name: 'Sweet Baby', slug: 'baby1' },
       { id: 'baby2', name: 'Little Star', slug: 'little-star' },
       { id: 'baby3', name: 'Baby Love', slug: 'baby-love' },
       { id: 'baby4', name: 'Tiny Feet', slug: 'tiny-feet' }
@@ -149,7 +149,7 @@ export const componentMap = {
   quince2: () => import('../components/demos/website/15anos/15anos2'),
   quince3: () => import('../components/demos/website/15anos/15anos3'),
   quince4: () => import('../components/demos/website/15anos/15anos4'),
-  baby1: () => import('../components/demos/website/babyshower/babyshower1'),
+  baby1: () => import('../components/demos/website/babyshower/babyshower1/babyshower1'),
   baby2: () => import('../components/demos/website/babyshower/babyshower2'),
   baby3: () => import('../components/demos/website/babyshower/babyshower3'),
   baby4: () => import('../components/demos/website/babyshower/babyshower4'),

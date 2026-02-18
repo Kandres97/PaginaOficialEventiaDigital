@@ -446,7 +446,7 @@ ${formData.mensaje || 'No proporcionó mensaje adicional'}
       </div>
 
       {/* Animaciones CSS */}
-      <style jsx>{`
+      <style>{`
         @keyframes fadeInUp {
           from {
             opacity: 0;

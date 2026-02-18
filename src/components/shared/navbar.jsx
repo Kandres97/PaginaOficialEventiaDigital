@@ -15,10 +15,8 @@ const Navbar = () => {
 
   // Función para hacer scroll a secciones
   const scrollToSection = (sectionId) => {
-    // Si no estamos en la página principal, navegar primero
     if (location.pathname !== `/${paisActual}` && location.pathname !== '/') {
       navigate(`/${paisActual}`);
-      // Esperar a que la navegación complete antes de hacer scroll
       setTimeout(() => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -26,17 +24,18 @@ const Navbar = () => {
         }
       }, 100);
     } else {
-      // Ya estamos en la página principal, solo hacer scroll
       const element = document.getElementById(sectionId);
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
-    // Cerrar menú móvil si está abierto
     setIsMenuOpen(false);
   };
 
   const cambiarPais = (nuevoPais) => {
+    // Guardar preferencia en localStorage
+    localStorage.setItem('eventia_country', nuevoPais);
+    
     if (location.pathname === '/' || location.pathname === '/co' || location.pathname === '/es') {
       navigate(`/${nuevoPais}`);
     } else {
@@ -55,6 +54,16 @@ const Navbar = () => {
     { nombre: "Bautizo", gif: "/assets/images/paginaoficial/bautizo.gif", url: `/${paisActual}/modelo/bautizo` },
     { nombre: "Empresarial", gif: "/assets/images/paginaoficial/empresarial.gif", url: `/${paisActual}/modelo/empresarial` }
   ];
+
+  // País contrario para el botón de cambiar
+  const paisContrario = paisActual === 'co' ? 'es' : 'co';
+  const nombrePaisContrario = paisActual === 'co' ? 'España' : 'Colombia';
+  const banderaPaisActual = paisActual === 'co' 
+    ? "/assets/images/paginaoficial/es-CO.svg" 
+    : "/assets/images/paginaoficial/es-ES.svg";
+  const banderaPaisContrario = paisActual === 'co' 
+    ? "/assets/images/paginaoficial/es-ES.svg" 
+    : "/assets/images/paginaoficial/es-CO.svg";
 
   return (
     <nav className="bg-white/80 backdrop-blur-md shadow-sm fixed w-full top-0 z-50">
@@ -121,7 +130,6 @@ const Navbar = () => {
               Planes
             </button>
             
-            {/* 🆕 CAMBIO: sectionId actualizado a 'como-funciona' */}
             <button 
               onClick={() => scrollToSection('como-funciona')} 
               className="text-gray-700 hover:text-[#B88B80] transition-colors font-medium"
@@ -136,27 +144,32 @@ const Navbar = () => {
               Contacto
             </button>
 
-            {/* Selector de País con banderas SVG */}
-            <div className="flex gap-2 ml-4 pl-4 border-l border-gray-300">
-              <button 
-                onClick={() => cambiarPais('co')} 
-                className={`w-7 h-7 rounded-full transition-all duration-300 flex items-center justify-center overflow-hidden hover:scale-110 ${
-                  paisActual === 'co' ? 'opacity-100' : 'opacity-50 hover:opacity-75'
-                }`} 
-                title="Cambiar a Colombia"
-              >
-                <img src="/assets/images/paginaoficial/es-CO.svg" alt="Colombia" className="w-full h-full object-cover" />
-              </button>
-              <button 
-                onClick={() => cambiarPais('es')} 
-                className={`w-7 h-7 rounded-full transition-all duration-300 flex items-center justify-center overflow-hidden hover:scale-110 ${
-                  paisActual === 'es' ? 'opacity-100' : 'opacity-50 hover:opacity-75'
-                }`} 
-                title="Cambiar a España"
-              >
-                <img src="/assets/images/paginaoficial/es-ES.svg" alt="España" className="w-full h-full object-cover" />
-              </button>
-            </div>
+            {/* ✅ Selector de País Desktop - Clickeable para cambiar */}
+            <button
+              onClick={() => cambiarPais(paisContrario)}
+              className="flex items-center gap-2 ml-4 pl-4 border-l border-gray-300 text-sm text-gray-600 hover:text-[#B88B80] transition-all duration-300 cursor-pointer group"
+              title={`Cambiar a ${nombrePaisContrario}`}
+            >
+              <div className="relative w-7 h-7">
+                <img 
+                  src={banderaPaisActual}
+                  alt={paisActual === 'co' ? 'Colombia' : 'España'} 
+                  className="w-full h-full rounded-full object-cover transition-opacity duration-300 group-hover:opacity-0" 
+                />
+                <img 
+                  src={banderaPaisContrario}
+                  alt={nombrePaisContrario} 
+                  className="w-full h-full rounded-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" 
+                />
+              </div>
+              <span className="font-medium tracking-wide">
+                <span className="group-hover:hidden">{paisActual === 'co' ? 'CO' : 'ES'}</span>
+                <span className="hidden group-hover:inline">Cambiar país</span>
+              </span>
+              <svg className="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+              </svg>
+            </button>
           </div>
 
           {/* Botón hamburguesa móvil */}
@@ -256,7 +269,7 @@ const Navbar = () => {
               <span>Planes</span>
             </button>
             
-            {/* 🆕 CAMBIO: sectionId actualizado a 'como-funciona' */}
+            {/* Cómo Funciona */}
             <button 
               onClick={() => scrollToSection('como-funciona')} 
               className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-[#E8D5D0] hover:text-[#B88B80] transition-colors font-medium rounded-lg mx-2 w-full text-left"
@@ -284,29 +297,27 @@ const Navbar = () => {
               <span>Contacto</span>
             </button>
 
-            {/* Selector de País Móvil */}
+            {/* ✅ Selector de País Móvil - Botón claro para cambiar */}
             <div className="mx-2 mt-4 pt-4 border-t border-gray-200">
-              <p className="text-xs text-gray-500 text-center mb-3">Selecciona tu país</p>
-              <div className="flex gap-4 justify-center">
-                <button 
-                  onClick={() => { cambiarPais('co'); setIsMenuOpen(false); }} 
-                  className={`w-12 h-12 rounded-full transition-all duration-300 flex items-center justify-center overflow-hidden hover:scale-110 ${
-                    paisActual === 'co' ? 'opacity-100' : 'opacity-50'
-                  }`}
-                  title="Cambiar a Colombia"
-                >
-                  <img src="/assets/images/paginaoficial/es-CO.svg" alt="Colombia" className="w-full h-full object-cover" />
-                </button>
-                <button 
-                  onClick={() => { cambiarPais('es'); setIsMenuOpen(false); }} 
-                  className={`w-12 h-12 rounded-full transition-all duration-300 flex items-center justify-center overflow-hidden hover:scale-110 ${
-                    paisActual === 'es' ? 'opacity-100' : 'opacity-50'
-                  }`}
-                  title="Cambiar a España"
-                >
-                  <img src="/assets/images/paginaoficial/es-ES.svg" alt="España" className="w-full h-full object-cover" />
-                </button>
-              </div>
+              <button 
+                onClick={() => { 
+                  cambiarPais(paisContrario); 
+                  setIsMenuOpen(false); 
+                }} 
+                className="w-full flex items-center justify-center gap-3 px-4 py-3.5 bg-[#F5F1ED] hover:bg-[#E8D5D0] rounded-xl transition-all duration-300"
+              >
+                <img 
+                  src={banderaPaisContrario}
+                  alt={nombrePaisContrario} 
+                  className="w-7 h-7 rounded-full object-cover" 
+                />
+                <span className="text-sm font-semibold text-gray-700">
+                  Cambiar a {paisActual === 'co' ? 'España y Europa' : 'Colombia y América Latina'}
+                </span>
+                <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>

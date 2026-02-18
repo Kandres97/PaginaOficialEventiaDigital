@@ -249,7 +249,7 @@ const EventModelPage = ({ eventConfig }) => {
       </div>
 
       {/* Animaciones CSS - Mismas que otros componentes */}
-      <style jsx>{`
+      <style>{`
         @keyframes fadeInUp {
           from {
             opacity: 0;
